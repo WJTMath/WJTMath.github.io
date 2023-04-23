@@ -1,12 +1,54 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: Classes
+    url: /classes.html
+  - title: "Sitemap"
+    url: /sitemap/
+
+classes:
+  - title: "All Classes"
+    children:
+      - title: "College Algebra: MATH 1314"
+        url: /college-algebra
+
+college-algebra:
+  - title: "College Algebra: MATH 1314"
+    children:
+      - title: "Course Home"
+        url: /college-algebra
+  - title: "Algebra and Functions"
+    children:
+    - title: "arithmetic-algebra"
+      url: /college-algebra/01-arithmetic-algebra.html
+    - title: "equations-inequalities"
+      url: /college-algebra/02-equations-inequalities.html
+    - title: "functions-and-inverse-functions"
+      url: /college-algebra/03-functions-and-inverse-functions.html
+    - title: "linear-and-quadratic-functions"
+      url: /college-algebra/04-linear-and-quadratic-functions.html
+  - title: "Functions and Graphing"
+    children:
+    - title: "graphing-transformations"
+      url: /college-algebra/05-graphing-transformations.html
+    - title: "polynomial-functions"
+      url: /college-algebra/06-polynomial-functions.html
+    - title: "rational-functions"
+      url: /college-algebra/07-rational-functions.html
+    - title: "radical-functions"
+      url: /college-algebra/08-radical-functions.html
+    - title: "function-operations"
+      url: /college-algebra/09-function-operations.html
+  - title: "Exponential and Logarithmic Functions"
+    children:
+    - title: "exponential-functions"
+      url: /college-algebra/10-exponential-functions.html
+    - title: "logarithmic-functions"
+      url: /college-algebra/11-logarithmic-functions.html
+    - title: "exponential-and-logarithmic-equations"
+      url: /college-algebra/12-exponential-and-logarithmic-equations.html
+  - title: "Systems and Matrices"
+    children:
+    - title: "systems-of-linear-equations"
+      url: /college-algebra/13-systems-of-linear-equations.html
+    - title: "gauss-jordan-elimination"
+      url: /college-algebra/14-gauss-jordan-elimination.html

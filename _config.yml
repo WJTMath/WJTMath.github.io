@@ -11,8 +11,8 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+remote_theme             : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -21,16 +21,22 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Westley Trevino"
 description              : "An amazing website."
-url                      : "https://trevino.pw" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "WJTMath/wjtmath.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+breadcrumbs              : false # true, false (default)
+words_per_minute         : 150
+
 head_scripts:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
-breadcrumbs              : true # true, false (default)
-words_per_minute         : 150
+  - https://code.jquery.com/jquery-3.3.1.min.js
+# footer_scripts:
+#   (don't use: disables main.min.js)
+# after_footer_scripts:
+#   - 
 
 comments:
   provider               : false # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -220,10 +226,10 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+permalink: /:categories/:title:output_ext
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
+timezone: #America/Chicago # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -279,6 +285,10 @@ compress_html:
   ignore:
     envs: development
 
+collections_dir: collections
+collections:
+  college-algebra:
+    output: true
 
 # Defaults
 defaults:
@@ -293,3 +303,20 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: splash
+      author_profile: false
+      header:
+        overlay_color: "#333"
+  - scope:
+      path: ""
+      type: college-algebra
+    values:
+      layout: single
+      toc: true
+      sidebar:
+        nav: college-algebra
